@@ -1,0 +1,26 @@
+public class PalindromeOfString {
+
+    public static boolean palindromeString(String str){
+
+        int i=0; int j=str.length()-1;
+        while (i<j){
+            if (str.charAt(i)==str.charAt(j)){
+                i++;
+                j--;
+            }else {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+
+        String s = "abccba";
+        if (palindromeString(s)){
+            System.out.println("String is palindrome");
+        }else {
+            System.out.println("String is not palindrome");
+        }
+    }
+}
